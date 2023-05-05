@@ -1,11 +1,11 @@
 <header>
     <img src="../../assets/Images/Bachira.png" alt="">
     <nav>
-        <a href="">Home</a>
-        <a href="">Products</a>
-        <a href="">Categories</a>
-        <a href="">Brands</a>
-        <a href="">Pricing</a>
+        <a  *ngFor="let str of NavLinks; index as i" 
+            [ngStyle]="{'color': (MarkedNavLink == i) ? 'Black' : '#535A56'}"
+            (click)="SetCorrentNavLink(i)">
+            {{str}}
+        </a>
     </nav>
     <div>
         <button>Login</button>

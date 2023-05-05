@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  MarkedNavLink = 0;
+  NavLinks: string[] = [
+    "Home",
+    "Products",
+    "Categories",
+    "Brands",
+    "Pricing"
+  ]
 
+  SetCorrentNavLink(i: number) {
+    this.MarkedNavLink = i;
+  }
 }

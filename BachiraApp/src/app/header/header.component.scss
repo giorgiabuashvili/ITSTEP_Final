@@ -34,10 +34,6 @@ header {
         align-items: center;
         text-align: center;
 
-        a:first-child {
-            color: $Black;
-        }
-
         a {
             text-decoration: none;
             color: $Grey;
@@ -132,6 +128,6 @@ header {
 
     button {
         font-size: 5px;
-        padding: 3.75px 5.625px !important;
+        padding: 2.75px 5.625px !important;
     }
 }
