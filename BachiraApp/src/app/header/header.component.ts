@@ -13,7 +13,7 @@ export class HeaderComponent {
     "Products",
     "Categories",
     "Brands",
-    "Pricing"
+    "Pricing",
   ]
 
   constructor(public appComponent: AppComponent) {}
