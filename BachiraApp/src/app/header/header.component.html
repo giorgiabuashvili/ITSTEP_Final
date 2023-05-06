@@ -8,7 +8,7 @@
         </a>
     </nav>
     <div>
-        <button>Login</button>
-        <button id="reg-button">Register</button>
+        <button (click)="appComponent.OpenRouterLink(['login'])">Login</button>
+        <button id="reg-button" (click)="appComponent.OpenRouterLink(['register'])">Register</button>
     </div>
 </header>

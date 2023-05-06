@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,8 @@ export class HeaderComponent {
     "Brands",
     "Pricing"
   ]
+
+  constructor(public appComponent: AppComponent) {}
 
   SetCorrentNavLink(i: number) {
     this.MarkedNavLink = i;
