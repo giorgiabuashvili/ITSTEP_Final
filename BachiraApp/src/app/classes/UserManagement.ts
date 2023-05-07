@@ -8,20 +8,19 @@ export class UserManagement {
         if (this.users == null)
             this.users = [];
         
-
-        let isValid: boolean = true;
         for (let i = 0; i < this.users.length; i++) {
             const user_ = this.users[i];
             if (user.email == user_.email) {
-                return;
+                return false;
             }
         }
 
-        if (isValid) {
-            this.users.push(user);
-            this.users_data = JSON.stringify(this.users);
-            localStorage.setItem('user_data', this.users_data);
-        }
+        this.users.push(user);
+        this.users_data = JSON.stringify(this.users);
+        localStorage.setItem('user_data', this.users_data);
+
+
+        return true;
         
     }
 

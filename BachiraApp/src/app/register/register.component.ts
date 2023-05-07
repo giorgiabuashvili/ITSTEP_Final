@@ -9,9 +9,10 @@ import { UserManagement } from '../classes/UserManagement';
 })
 export class RegisterComponent {
   enteredUser: User = new User();
+  accountAlreadyExists: boolean = false;
 
   OnSubmit() {
-    UserManagement.Update(this.enteredUser);
+    this.accountAlreadyExists = !UserManagement.Update(this.enteredUser);
     this.enteredUser = new User();
     UserManagement.TEST();
   }
