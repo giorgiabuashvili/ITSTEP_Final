@@ -1,4 +1,5 @@
 @use "../variables";
+@use "../globalMediaQueries";
 
 * {
     box-sizing: border-box;
@@ -29,6 +30,12 @@ body {
             color: variables.$Grey;
         }
 
+        #validation-div {
+            p {
+                color: red;
+            }
+        }
+
         input {
             padding: 8px 10px;
             width: 100%;
@@ -56,6 +63,10 @@ body {
 
         button:active {
             background-color: #226854;
+        }
+
+        button:disabled {
+            background-color: variables.$Grey;
         }
     }
 }
