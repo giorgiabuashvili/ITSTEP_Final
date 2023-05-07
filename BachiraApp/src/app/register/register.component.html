@@ -1,1 +1,22 @@
-<p>register works!</p>
+<div id="container">
+    <h1>Create new account</h1>
+    <form action="" #myForm="ngForm" (submit)="OnSubmit()">
+        <div>
+            <p>Email</p>
+            <input type="email" id="email-input" name="email-input" #email="ngModel" [(ngModel)]="enteredUser.email"
+                [email]="true" required>
+        </div>
+        <div>
+            <p>Password</p>
+            <input type="password" id="password-input" name="password-input" #password="ngModel"
+                [(ngModel)]="enteredUser.password" minlength="8" required>
+        </div>
+
+        <div id="validation-div">
+            <p *ngIf="email.errors?.['email']">Please enter email in correct format</p>
+            <p *ngIf="password.errors?.['minlength']">Minimum password length is 8</p>
+        </div>
+
+        <button type="submit" [disabled]="!email.valid || !password.valid">Create</button>
+    </form>
+</div>

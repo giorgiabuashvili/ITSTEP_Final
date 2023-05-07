@@ -16,18 +16,4 @@ export class AppComponent {
   }
 }
 
-export class User {
-  email!: string;
-  password!: string;
-  avatar!: string;
-  status!: Status;
-  cart!: Product[];
-}
 
-enum Status {
-  Admin, Member
-}
-
-export class Product {
-  // TODO
-}
