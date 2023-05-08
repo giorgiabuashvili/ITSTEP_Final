@@ -14,6 +14,6 @@ export class RegisterComponent {
   OnSubmit() {
     this.accountAlreadyExists = !UserManagement.Update(this.enteredUser);
     this.enteredUser = new User();
-    UserManagement.TEST();
+    UserManagement.PrintUsers();
   }
 }

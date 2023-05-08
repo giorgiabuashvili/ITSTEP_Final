@@ -1,6 +1,6 @@
 <div id="container">
     <h1>Log in your account</h1>
-    <form action="" #myForm="ngForm">
+    <form action="" #myForm="ngForm" (submit)="OnSubmit()">
         <div>
             <p>Email</p>
             <input type="email" id="email-input" name="email-input" #email="ngModel" [(ngModel)]="enteredUser.email"
