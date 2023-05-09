@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from '../classes/User';
 import { UserManagement } from '../classes/UserManagement';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +11,13 @@ import { UserManagement } from '../classes/UserManagement';
 export class LoginComponent {
   enteredUser: User = new User();
 
+  constructor(public appComponent: AppComponent) {}
+
   OnSubmit() {
-    console.log(UserManagement.IsValidUser(this.enteredUser));
+    if (UserManagement.IsValidUser(this.enteredUser)) {
+      let user: User | undefined = UserManagement.GetFullUser(this.enteredUser.email);
+      if (user != undefined) this.appComponent.EnterUser(user);
+    }
     this.enteredUser = new User();
   }
 }

@@ -1,10 +1,8 @@
 import { User } from "./User";
 
 export class UserManagement {
-    //#region User array
     private static users_data: any = JSON.parse(localStorage.getItem('user_data') + "");
     private static users: User[] = this.users_data;
-    //#endregion
 
     public static Update(user: User) {
         if (this.users == null) this.users = [];
@@ -29,10 +27,8 @@ export class UserManagement {
         console.log(this.users_data);
     }
 
-    public static GetFullUser(email: string, password:string) {
-        return this.users.find((user_)=> {
-            return user_.email == email && user_.password == password;
-        })
+    public static GetFullUser(email: string) {
+        return this.users.find(u => u.email == email);
     }
 
     private static Exists(user: User) {
