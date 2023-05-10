@@ -10,23 +10,23 @@ body {
 }
 
 #container {
-    height: 500px;
-    width: 250px;
+    height: 31.25em;
+    width: 15.625em;
     margin-inline: auto;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 3.125em;
 
     h1 {
-        margin-bottom: 30px;
-        font-size: 20px;
+        margin-bottom: 1.875em;
+        font-size: 1.25em;
     }
 
     form {
         
         p {
             text-align: left;
-            margin-top: 5px;
-            margin-bottom: 4px;
+            margin-top: 0.3125em;
+            margin-bottom: 0.25em;
             color: variables.$Grey;
         }
 
@@ -37,24 +37,24 @@ body {
         }
 
         input {
-            padding: 8px 10px;
+            padding: 0.5em 0.625em;
             width: 100%;
-            box-shadow: 0 2px 2px lightgray;
+            box-shadow: 0 0.125em 0.125em lightgray;
             outline: none;
             border: none;
             color: variables.$Grey;
-            border-radius: 8px;
+            border-radius: 0.5em;
         }
 
         button {
-            margin-top: 15px;
+            margin-top: 0.9375em;
             width: 100%;
-            padding: 12px 18px;
+            padding: 0.75em 1.125em;
             background-color: variables.$Green;
             outline: none;
             border: none;
             color: white;
-            border-radius: 8px;
+            border-radius: 0.5em;
         }
 
         button:hover {

@@ -1,11 +1,11 @@
 @use "../styles/variables";
 
 header {
-    padding-inline: 40px;
+    padding-inline: 2.5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 75px;
+    height: 4.6875em;
 
     img {
         width: variables.$logo_img_width;
@@ -22,17 +22,17 @@ header {
         a {
             text-decoration: none;
             color: variables.$Grey;
-            margin-inline: 5px;
+            margin-inline: 0.3125em;
         }
     }
 
     div {
         text-align: center;
         button {
-            padding: 12px 18px;
+            padding: 0.75em 1.125em;
             outline: none;
             border: none;
-            border-radius: 8px;
+            border-radius: 0.5em;
             background-color: white;
             transition: all 0.1s ease;
         }
@@ -57,50 +57,12 @@ header {
 
     #profile-corner {
         img {
+            border: 0.1875em solid variables.$Green;
+            padding: 0.125em;
+            border-radius: 50%;
             object-fit: cover;
-            width: 50px;
-            height: 50px;
+            width: 3.125em;
+            height: 3.125em;
         }
-    }
-}
-
-@media screen and (max-width:700px) {
-    nav {
-        a {
-            text-align: center;
-        }
-    }
-
-    #profile-corner {
-        img {
-            width: 25px !important;
-            height: 25px !important;
-        }
-    }
-
-    button {
-        padding: 7.5px 11.25px !important;
-    }
-}
-@media screen and (max-width:500px) {
-    nav {
-        a {
-            text-align: center;
-        }
-    }
-
-    button {
-        padding: 6px 9px !important;
-    }
-}
-@media screen and (max-width:430px) {
-    nav {
-        a {
-            text-align: center;
-        }
-    }
-
-    button {
-        padding: 2.75px 5.625px !important;
     }
 }

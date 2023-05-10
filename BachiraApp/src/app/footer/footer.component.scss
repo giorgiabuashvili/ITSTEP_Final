@@ -2,7 +2,7 @@
 @use "../styles/variables";
 
 footer {
-    padding-inline: 40px;
+    padding-inline: 2.5em;
 
     section:first-child {
         margin-top: 0px;
@@ -39,7 +39,7 @@ footer {
                     font-weight: normal;
                     
                     li {
-                        line-height: 25px;
+                        line-height: 1.5625em;
                         font-weight: normal !important;
                         color: variables.$Grey;
                     }
@@ -52,7 +52,7 @@ footer {
     }
 
     section {
-        margin-top: 50px;
+        margin-top: 3.125em;
         p {
             text-align: center;
         }
