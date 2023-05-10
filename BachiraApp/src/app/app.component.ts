@@ -7,12 +7,22 @@ import { User } from './classes/User';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'BachiraApp';
   isLogined: boolean = false;
   user: User = new User();
 
   constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    let tryToGetUser: string | null = localStorage.getItem("entered_user");
+    if (tryToGetUser != null) {
+      this.user = JSON.parse(tryToGetUser);
+      this.isLogined = true;
+      console.log(this.user.avatar)
+    }
+
+  }
 
   public OpenRouterLink(link:any[]) {
     this.router.navigate(link);
@@ -21,6 +31,7 @@ export class AppComponent {
   public EnterUser(user: User) {
     this.isLogined = true;
     this.user = user;
+    localStorage.setItem("entered_user", JSON.stringify(this.user));
   }
 
   public ExitUser() {

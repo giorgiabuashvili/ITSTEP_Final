@@ -1,14 +1,17 @@
 <header>
-    <img class="logo" src="../../assets/Images/Bachira.png" alt="">
+    <img class="logo" src="assets/Images/Bachira.png" alt="logo">
     <nav>
         <a  *ngFor="let str of NavLinks; index as i" 
             [ngStyle]="{'color': (MarkedNavLink == i) ? 'Black' : '#535A56'}"
             (click)="SetCorrentNavLink(i)">
-            {{str}}
+            {{str | titlecase}}
         </a>
     </nav>
-    <div>
+    <div *ngIf="!appComponent.isLogined">
         <button (click)="appComponent.OpenRouterLink(['login'])">Login</button>
         <button id="reg-button" (click)="appComponent.OpenRouterLink(['register'])">Register</button>
+    </div>
+    <div *ngIf="appComponent.isLogined" id="profile-corner">
+        <img [src]="appComponent.user.avatar" alt="profile_picture">
     </div>
 </header>
