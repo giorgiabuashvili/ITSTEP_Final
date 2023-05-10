@@ -3,7 +3,7 @@
     <nav>
         <a  *ngFor="let str of NavLinks; index as i" 
             [ngStyle]="{'color': (MarkedNavLink == i) ? 'Black' : '#535A56'}"
-            (click)="SetCorrentNavLink(i)">
+            (click)="SetCorrentNavLink(i); appComponent.OpenRouterLink([str])">
             {{str | titlecase}}
         </a>
     </nav>
