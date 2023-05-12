@@ -3,6 +3,10 @@
 
 html {
     font-size: 16px;
+    box-sizing: border-box !important;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 * {
@@ -18,10 +22,53 @@ app-root {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     router-outlet {
         position: absolute;
+    }
+
+    app-footer {
+        margin-top: auto;
+    }
+
+    .app-button-g {
+        padding: 0.75em 1.125em;
+        outline: none;
+        border: none;
+        border-radius: 0.5em;
+        transition: all 0.1s ease;
+        background-color: variables.$Green;
+        color: white;
+    }
+
+    .app-button-g:hover {
+        background-color: #37816b;
+    }
+
+    .app-button-g:active {
+        background-color: #226854;
+    }
+
+    .app-button-w {
+        padding: 0.75em 1.125em;
+        outline: none;
+        border: none;
+        border-radius: 0.5em;
+        transition: all 0.1s ease;
+        background-color: white;
+        color: black;
+    }
+
+    .app-button-w:hover {
+        background-color: lightgray;
+    }
+
+    .app-button-w:active {
+        background-color: variables.$Grey;
+    }
+
+    .app-button-w:disabled, .app-button-g:disabled {
+        background-color: variables.$Grey;
     }
 }
 

@@ -17,6 +17,6 @@
             <p *ngIf="password.errors?.['minlength']">Minimum password length is 8</p>
         </div>
 
-        <button type="submit" [disabled]="!email.valid || !password.valid">Log in</button>
+        <button class="app-button-g" type="submit" [disabled]="!email.valid || !password.valid">Log in</button>
     </form>
 </div>

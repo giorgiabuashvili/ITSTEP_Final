@@ -28,31 +28,6 @@ header {
 
     div {
         text-align: center;
-        button {
-            padding: 0.75em 1.125em;
-            outline: none;
-            border: none;
-            border-radius: 0.5em;
-            background-color: white;
-            transition: all 0.1s ease;
-        }
-
-        button:active {
-            background-color: rgb(241, 241, 241);
-        }
-
-        #reg-button {
-            background-color: variables.$Green;
-            color: white;
-        }
-
-        #reg-button:hover {
-            background-color: #37816b;
-        }
-
-        #reg-button:active {
-            background-color: #226854;
-        }
     }
 
     #profile-corner {

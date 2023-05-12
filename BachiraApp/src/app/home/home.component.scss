@@ -1,1 +1,155 @@
 @use '../styles/variables';
+
+
+#landing-div {
+    padding-inline: 2.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 31.25em;
+
+    div {
+        width: 50%;
+
+        h1 {
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 3em;
+            letter-spacing: 0.03125em;
+        }
+
+        h1:nth-child(2) {
+            color: variables.$Green;
+        }
+
+        p {
+            width: 28.375em;
+            height: 2.5em;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 0.875em;
+            line-height: 1.25em;
+            letter-spacing: 0.01875em;
+            color: variables.$Grey;
+        }
+
+        button {
+            margin-top: 1.5625em;
+        }
+    }
+
+    div {
+        height: 100%;
+        width: 50%;
+
+        img {
+            float: right
+        }
+    }
+}
+
+#collabs-div {
+    min-height: 15.625em;
+    padding-bottom: 8em;
+
+    pre {
+        text-align: center;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 1.5em;
+        /* or 125% */
+
+        text-align: center;
+        letter-spacing: 0.01875em;
+
+        /* Black */
+
+        color: variables.$Black;
+    }
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8em;
+
+        img:nth-child(1) {
+            width: 12.75em;
+            height: 2.8125em;
+        }
+
+        img:nth-child(2) {
+            width: 12.9375em;
+            height: 1.625em;
+        }
+
+        img:nth-child(3) {
+            width: 12.625em;
+            height: 2.875em;
+        }
+
+        img:nth-child(4) {
+            width: 12.625em;
+            height: 2em;
+        }
+
+        img:nth-child(5) {
+            width: 12.75em;
+            height: 2.0625em;
+        }
+    }
+}
+
+#browse-categories {
+    padding-inline: 2.5em;
+
+    pre {
+        margin-bottom: 0;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 1.5em;
+        letter-spacing: 0.01875em;
+        color: variables.$Black;
+    }
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 24.125em;
+
+        div:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0;
+        }
+
+        .browse-categories-button {
+            margin-bottom: 0.625em;
+            width: 31.25em;
+            height: 11.25em;
+            background: variables.$Black;
+            opacity: 0.35;
+            border-radius: 1.875em;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #landing-div {
+
+        div {
+            img {
+                display: none;
+            }
+        }
+    }
+
+}

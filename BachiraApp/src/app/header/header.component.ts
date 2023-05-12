@@ -7,21 +7,23 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  MarkedNavLink = 0;
-  NavLinks: string[] = [
+  public MarkedNavLink = 0;
+  public NavLinks: string[] = [
     "home",
     "products",
     "categories",
     "brands",
     "pricing",
-  ]
+  ];
 
   constructor(public appComponent: AppComponent) {}
+
   ngOnInit(): void {
     console.log(this.appComponent.user.avatar);
   }
 
-  SetCorrentNavLink(i: number) {
+  public SetCorrectNavLink(i: number) {
     this.MarkedNavLink = i;
   }
+
 }

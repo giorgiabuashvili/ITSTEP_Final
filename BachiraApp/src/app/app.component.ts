@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from './classes/User';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',

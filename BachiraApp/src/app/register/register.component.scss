@@ -1,5 +1,4 @@
 @use "../styles/variables";
-@use "../styles/globalMediaQueries";
 
 * {
     box-sizing: border-box;
@@ -50,23 +49,6 @@ body {
             margin-top: 0.9375em;
             width: 100%;
             padding: 0.75em 1.125em;
-            background-color: variables.$Green;
-            outline: none;
-            border: none;
-            color: white;
-            border-radius: 0.5em;
-        }
-
-        button:hover {
-            background-color: #37816b;
-        }
-
-        button:active {
-            background-color: #226854;
-        }
-
-        button:disabled {
-            background-color: variables.$Grey;
         }
     }
 }
