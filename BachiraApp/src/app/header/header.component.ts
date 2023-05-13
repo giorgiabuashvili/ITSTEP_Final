@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -6,7 +6,7 @@ import { AppComponent } from '../app.component';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   public MarkedNavLink = 0;
   public NavLinks: string[] = [
     "home",
@@ -17,10 +17,6 @@ export class HeaderComponent implements OnInit {
   ];
 
   constructor(public appComponent: AppComponent) {}
-
-  ngOnInit(): void {
-    console.log(this.appComponent.user.avatar);
-  }
 
   public SetCorrectNavLink(i: number) {
     this.MarkedNavLink = i;

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from './classes/User';
-import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -21,11 +20,8 @@ export class AppComponent implements OnInit{
     let tryToGetUserJSON: string | null = localStorage.getItem("entered_user");
     if (tryToGetUserJSON != null) {
       this.user = User.parse(JSON.parse(tryToGetUserJSON));
-      
       this.isLogined = true;
-      console.log(this.user)
     }
-
   }
 
   public OpenRouterLink(link:any[]) {

@@ -177,6 +177,54 @@
     }
 }
 
+#why-choose-bachira-div {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8em;
+    flex-wrap: wrap;
+
+    h1, h1 span {
+
+        width: 100%;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.3px;
+        color: #101913;
+    }
+
+    h1 {
+        span {
+            color: variables.$Green;
+        }
+    }
+
+    div {
+        margin-top: 4em;
+        margin-inline: 4em;
+        img {
+            width: 4em;
+            height: 4em;
+        }
+
+        h1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25em;
+            line-height: 1.25em;
+            letter-spacing: 0.01875em;
+            color: variables.$Black;
+        }
+
+        p {
+            color: variables.$Grey;
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
     #landing-div {
 
