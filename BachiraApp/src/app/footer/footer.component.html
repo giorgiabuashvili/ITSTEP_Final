@@ -11,8 +11,7 @@
         <div id="right">
             <ul>
                 <li>For Beginner</li>
-                <a ><li>About</li></a>
-                <a ><li>Career</li></a>
+                <a ><li (click)="appComponent.OpenRouterLink(['about'])">About</li></a>
                 <a ><li>Promotion</li></a>
             </ul>
             <ul>
@@ -23,9 +22,8 @@
             </ul>
             <ul>
                 <li>Explore Us</li>
-                <a ><li>Our Career</li></a>
                 <a ><li>Privacy</li></a>
-                <a ><li>Terms & Conditions</li></a>
+                <a ><li (click)="appComponent.OpenRouterLink(['terms&conditions'])">Terms & Conditions</li></a>
             </ul>
             <ul>
                 <li>Connect Us</li>

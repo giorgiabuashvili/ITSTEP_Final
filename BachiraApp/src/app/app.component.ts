@@ -15,8 +15,6 @@ export class AppComponent implements OnInit{
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.OpenRouterLink(['home'])
-
     let tryToGetUserJSON: string | null = localStorage.getItem("entered_user");
     if (tryToGetUserJSON != null) {
       this.user = User.parse(JSON.parse(tryToGetUserJSON));

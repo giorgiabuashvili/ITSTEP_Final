@@ -14,6 +14,9 @@ import { CategoriesComponent } from './categories/categories.component';
 import { BrandsComponent } from './brands/brands.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/terms-and-conditions-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     CategoriesComponent,
     BrandsComponent,
     PricingComponent,
+    ErrorPageComponent,
+    AboutPageComponent,
+    TermsAndConditionsPageComponent,
   ],
   imports: [
     BrowserModule,

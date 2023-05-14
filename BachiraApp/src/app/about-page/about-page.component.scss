@@ -1,0 +1,11 @@
+@use "../styles/variables";
+
+pre {
+    margin: 3em;
+    font-size: 1.2em;
+    font-weight: bold
+}
+
+pre:nth-child(even) {
+    color: variables.$Green;
+}

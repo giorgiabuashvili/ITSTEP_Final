@@ -1,0 +1,15 @@
+@use "../styles/variables";
+
+div {
+    text-align: center;
+    
+    h1 {
+        font-size: 4em;
+        color: variables.$Green;
+    }
+    
+    p {
+        font-size: 2em;
+        color: variables.$Grey;
+    }
+}

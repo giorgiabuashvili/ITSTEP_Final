@@ -7,6 +7,9 @@ import { ProductsComponent } from './products/products.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { BrandsComponent } from './brands/brands.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/terms-and-conditions-page.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -16,6 +19,10 @@ const routes: Routes = [
   { path: "categories", component: CategoriesComponent },
   { path: "brands", component: BrandsComponent },
   { path: "pricing", component: PricingComponent },
+  { path: "about", component: AboutPageComponent },
+  { path: "terms&conditions", component: TermsAndConditionsPageComponent },
+  { path: "", redirectTo: "/home", pathMatch: 'full' },
+  { path: "**", component: ErrorPageComponent }
 ];
 
 @NgModule({
