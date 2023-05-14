@@ -10,6 +10,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/terms-and-conditions-page.component';
+import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: "pricing", component: PricingComponent },
   { path: "about", component: AboutPageComponent },
   { path: "terms&conditions", component: TermsAndConditionsPageComponent },
+  { path: "privacy", component: PrivacyPageComponent },
   { path: "", redirectTo: "/home", pathMatch: 'full' },
   { path: "**", component: ErrorPageComponent }
 ];

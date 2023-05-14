@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/terms-and-conditions-page.component';
+import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/ter
     ErrorPageComponent,
     AboutPageComponent,
     TermsAndConditionsPageComponent,
+    PrivacyPageComponent,
   ],
   imports: [
     BrowserModule,
