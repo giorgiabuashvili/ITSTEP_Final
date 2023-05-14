@@ -18,6 +18,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/terms-and-conditions-page.component';
 import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
+import { UserPageComponent } from './user-page/user-page.component';
+import { PasswordPipe } from './pipes/PasswordPipe';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
     AboutPageComponent,
     TermsAndConditionsPageComponent,
     PrivacyPageComponent,
+    UserPageComponent,
+    PasswordPipe
   ],
   imports: [
     BrowserModule,

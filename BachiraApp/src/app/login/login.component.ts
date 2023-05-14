@@ -10,11 +10,13 @@ import { AppComponent } from '../app.component';
 })
 export class LoginComponent {
   enteredUser: User = new User();
+  isValidUser: boolean = true;
 
   constructor(public appComponent: AppComponent) {}
 
   OnSubmit() {
-    if (UserManagement.IsValidUser(this.enteredUser)) {
+    this.isValidUser = UserManagement.IsValidUser(this.enteredUser);
+    if (this.isValidUser) {
       let user: User | undefined = UserManagement.GetFullUser(this.enteredUser.email);
       if (user != undefined) this.appComponent.EnterUser(user);
     }

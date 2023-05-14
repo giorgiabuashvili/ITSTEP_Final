@@ -32,6 +32,8 @@ export class UserManagement {
     }
 
     private static Exists(user: User) {
+        if (this.users == null) return false;
+
         for (let i = 0; i < this.users.length; i++) {
             const user_ = this.users[i];
             if (user.email == user_.email) {
