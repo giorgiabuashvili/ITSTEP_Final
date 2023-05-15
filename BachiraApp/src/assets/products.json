@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "name": "name1",
+            "image": "image1",
+            "rating": 1,
+            "quantity": 1,
+            "discount": 0
+        },
+        {
+            "name": "name1",
+            "image": "image1",
+            "rating": 1,
+            "quantity": 1,
+            "discount": 0
+        },
+        {
+            "name": "name1",
+            "image": "image1",
+            "rating": 1,
+            "quantity": 1,
+            "discount": 0
+        },
+        {
+            "name": "name1",
+            "image": "image1",
+            "rating": 1,
+            "quantity": 1,
+            "discount": 0
+        }
+    ]
+}

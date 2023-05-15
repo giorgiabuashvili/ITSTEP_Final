@@ -1,5 +1,6 @@
 import { User } from "./User";
 
+
 export class UserManagement {
     private static users_data: any = JSON.parse(localStorage.getItem('user_data') + "");
     private static users: User[] = this.users_data;

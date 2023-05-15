@@ -1,6 +1,7 @@
 import { Product } from "./Product";
 
 export class User {
+    public username: string = "";
     public email: string = "";
     public password: string = "";
     public status: Status = Status.Member;

@@ -10,4 +10,9 @@ import { User } from '../classes/User';
 export class UserPageComponent {
   user: User = this.appComponent.user;
   constructor(public appComponent: AppComponent) {}
+
+  public OnExitButtonClick() {
+    this.appComponent.ExitUser();
+    this.appComponent.OpenRouterLink(['']);
+  }
 }
