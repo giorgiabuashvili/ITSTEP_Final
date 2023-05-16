@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../classes/ProductService';
+import { Filter, ProductService } from '../classes/ProductService';
 
 @Component({
   selector: 'app-products',
@@ -11,8 +11,8 @@ export class ProductsComponent implements OnInit {
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productService.GetData().then(res=>{
-      console.log(res['products'])
+    this.productService.GetProductsByFilter(new Filter()).then(res=>{
+      console.log(res);
     })
   }
 }
