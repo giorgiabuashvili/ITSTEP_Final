@@ -184,7 +184,8 @@
     padding-bottom: 8em;
     flex-wrap: wrap;
 
-    h1, h1 span {
+    h1,
+    h1 span {
 
         width: 100%;
         font-family: 'Manrope';
@@ -205,6 +206,7 @@
     div {
         margin-top: 4em;
         margin-inline: 4em;
+
         img {
             width: 4em;
             height: 4em;
@@ -223,6 +225,25 @@
             color: variables.$Grey;
         }
     }
+}
+
+#products-list {
+    padding-left: 2.5em;
+    padding-bottom: 8em;
+
+    h1 {
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 2.5em;
+        color: variables.$Black;
+    }
+
+    #container {
+        overflow-x: scroll;
+        display: flex;
+        gap: 15px;
+    }
+
 }
 
 @media screen and (max-width: 1200px) {

@@ -74,5 +74,12 @@ adipiscing elit, sed do eiusmod tempor
     </div>
 </div>
 <div id="products-list">
-    
+    <h1>Popular Products From All Brands</h1>
+    <div id="container" *ngIf="products.length>0">
+        <div class="app-product-card" *ngFor="let product of products">
+            <img [src]="product.image">
+            <h1>{{product.name}}</h1>
+            <p>{{product.price | currency}}</p>
+        </div>
+    </div>
 </div>

@@ -11,7 +11,7 @@ html {
     box-sizing: border-box !important;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 * {
@@ -72,8 +72,27 @@ app-root {
         background-color: variables.$Grey;
     }
 
-    .app-button-w:disabled, .app-button-g:disabled {
+    .app-button-w:disabled,
+    .app-button-g:disabled {
         background-color: variables.$Grey;
+    }
+
+    .app-product-card {
+        img {
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-weight: 500 !important;
+            font-size: 1.25em !important;
+            letter-spacing: 0.01875em !important;
+            color: #101913 !important;
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-top: 0;
+        }
     }
 }
 
@@ -89,6 +108,7 @@ app-root {
         line-height: 12px;
     }
 }
+
 @media screen and (max-width:500px) {
     .logo {
         width: variables.$logo_img_width*0.45 !important;
@@ -101,6 +121,7 @@ app-root {
         line-height: 10px;
     }
 }
+
 @media screen and (max-width:430px) {
     .logo {
         width: variables.$logo_img_width*0.35 !important;

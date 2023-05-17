@@ -6,7 +6,6 @@ import { Category, Product } from "./Product";
 @Injectable()
 export class ProductService {
     // constructor(private http: HttpClient) {}
-
     public async GetData(): Promise<any> {
         let response = await fetch("assets/products.json");
         let body = await response.json();

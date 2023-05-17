@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Filter, ProductService } from '../classes/ProductService';
 
 @Component({
@@ -6,13 +6,6 @@ import { Filter, ProductService } from '../classes/ProductService';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
 
-  constructor(private productService: ProductService) {}
-
-  ngOnInit(): void {
-    this.productService.GetProductsByFilter(new Filter()).then(res=>{
-      console.log(res);
-    })
-  }
 }

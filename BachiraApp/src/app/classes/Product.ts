@@ -9,7 +9,7 @@ export class Product {
     
     private _price!: number;
     public get price(): number {
-        return this._price * 1-this.discount;
+        return this._price * (1-this.discount);
     }
     public set price(value: number) {
         this._price = value;

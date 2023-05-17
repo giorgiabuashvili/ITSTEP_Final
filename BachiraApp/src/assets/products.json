@@ -2,42 +2,120 @@
     "products": [
         {
             "id" : "1",
-            "name" : "name1",
-            "image" : "#",
-            "rating" :  0.1,
-            "quantity" : 10,
-            "discount" : 0,
-            "price" : 15,
-            "categories" : [ 0, 1, 2, 4 ]
+            "name" : "Shoe",
+            "image" : "assets/Images/shoe.png",
+            "rating" :  0.8,
+            "quantity" : 1000,
+            "discount" : 0.1,
+            "price" : 100,
+            "categories" : [ 2 ]
         },
         {
             "id" : "2",
-            "name" : "name2",
-            "image" : "#",
-            "rating" : 1,
-            "quantity" : 10,
+            "name" : "Hoodie",
+            "image" : "assets/Images/hoodie.png",
+            "rating" : 0.9,
+            "quantity" : 5000,
             "discount" : 0,
-            "price" : 5,
-            "categories" : [1, 2, 4]
+            "price" : 50,
+            "categories" : [ 0 ]
         },{
             "id" : "3",
-            "name" : "name3",
-            "image" : "#",
+            "name" : "Watch",
+            "image" : "assets/Images/watch.png",
             "rating" : 1,
-            "quantity" : 10,
-            "discount" : 0,
-            "price" : 15,
-            "categories" : [ 0, 1, 2, 4]
+            "quantity" : 500,
+            "discount" : 0.1,
+            "price" : 1500,
+            "categories" : [ 1 ]
         },
         {
             "id" : "4",
-            "name" : "name4",
-            "image" : "#",
+            "name" : "Lotion",
+            "image" : "assets/Images/skincare.png",
             "rating" : 1,
-            "quantity" : 10,
+            "quantity" : 2000,
             "discount" : 0,
             "price" : 10,
-            "categories" : [ 0, 1, 2, 4]
+            "categories" : [ 3 ]
+        },
+        {
+            "id" : "1",
+            "name" : "Shoe",
+            "image" : "assets/Images/shoe.png",
+            "rating" :  0.8,
+            "quantity" : 1000,
+            "discount" : 0.1,
+            "price" : 100,
+            "categories" : [ 2 ]
+        },
+        {
+            "id" : "2",
+            "name" : "Hoodie",
+            "image" : "assets/Images/hoodie.png",
+            "rating" : 0.9,
+            "quantity" : 5000,
+            "discount" : 0,
+            "price" : 50,
+            "categories" : [ 0 ]
+        },{
+            "id" : "3",
+            "name" : "Watch",
+            "image" : "assets/Images/watch.png",
+            "rating" : 1,
+            "quantity" : 500,
+            "discount" : 0.1,
+            "price" : 1500,
+            "categories" : [ 1 ]
+        },
+        {
+            "id" : "4",
+            "name" : "Lotion",
+            "image" : "assets/Images/skincare.png",
+            "rating" : 1,
+            "quantity" : 2000,
+            "discount" : 0,
+            "price" : 10,
+            "categories" : [ 3 ]
+        },
+        {
+            "id" : "1",
+            "name" : "Shoe",
+            "image" : "assets/Images/shoe.png",
+            "rating" :  0.8,
+            "quantity" : 1000,
+            "discount" : 0.1,
+            "price" : 100,
+            "categories" : [ 2 ]
+        },
+        {
+            "id" : "2",
+            "name" : "Hoodie",
+            "image" : "assets/Images/hoodie.png",
+            "rating" : 0.9,
+            "quantity" : 5000,
+            "discount" : 0,
+            "price" : 50,
+            "categories" : [ 0 ]
+        },{
+            "id" : "3",
+            "name" : "Watch",
+            "image" : "assets/Images/watch.png",
+            "rating" : 1,
+            "quantity" : 500,
+            "discount" : 0.1,
+            "price" : 1500,
+            "categories" : [ 1 ]
+        },
+        {
+            "id" : "4",
+            "name" : "Lotion",
+            "image" : "assets/Images/skincare.png",
+            "rating" : 1,
+            "quantity" : 2000,
+            "discount" : 0,
+            "price" : 10,
+            "categories" : [ 3 ]
         }
     ]
 }
