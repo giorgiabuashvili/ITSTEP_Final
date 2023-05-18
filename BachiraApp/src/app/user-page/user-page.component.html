@@ -9,4 +9,11 @@
         <button class="app-button-g">Edit Profile</button>
         <button class="app-button-w" (click)="OnExitButtonClick()">Log out</button>
     </div>
+    <div id="cart">
+        <div class="app-product-div" *ngFor="let product of user.cart">
+            <img [src]="product.image" alt="">
+            <h1>{{product.name}}</h1>
+            <p>{{product.price | currency}}</p>
+        </div>
+    </div>
 </div>

@@ -29,7 +29,17 @@
                     <option [value]="3">Skincare</option>
                 </select>
             </div>
+            <div>
+                <label for="brands">Brands</label>
+                <select name="brands" id="brands" [(ngModel)]="enteredFilter.brands[0]">
+                    <option value="Nike">Nike</option>
+                    <option value="Zara">Zara</option>
+                    <option value="Rolex">Rolex</option>
+                    <option value="Clinique">Clinique</option>
+                </select>
+            </div>
             <button class="app-button-g">Filter</button>
+            <button class="app-button-w" (click)="Reset()">Reset Fitler</button>
         </form>
     </div>
 </div>

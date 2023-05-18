@@ -11,9 +11,10 @@ export class RegisterComponent {
   enteredUser: User = new User();
   accountAlreadyExists: boolean = false;
 
+  constructor(private userManagement: UserManagement) {}
+
   OnSubmit() {
-    this.accountAlreadyExists = !UserManagement.Update(this.enteredUser);
+    this.accountAlreadyExists = !this.userManagement.CreateNewUser(this.enteredUser);
     this.enteredUser = new User();
-    UserManagement.PrintUsers();
   }
 }

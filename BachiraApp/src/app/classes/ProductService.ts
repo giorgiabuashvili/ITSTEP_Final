@@ -1,7 +1,7 @@
 //import { HttpClient } from "@angular/common/http";
 import { ReadPropExpr } from "@angular/compiler";
 import { Injectable } from "@angular/core";
-import { Category, Product } from "./Product";
+import { Brand, Category, Product } from "./Product";
 
 @Injectable()
 export class ProductService {
@@ -48,6 +48,7 @@ export class ProductService {
             if (filter.min_rating != -1 && filter.min_rating > prod.rating) return false;
             if (filter.is_in_stock != true && prod.quantity <= 0) return false;
             if (filter.categories.length > 0 && !filter.categories.every(val=>prod.categories.includes(val))) return false;
+            if (filter.brands.length > 0 && !filter.brands.every(val=>prod.brand.includes(val))) return false;
 
             return true;
         })
@@ -62,4 +63,5 @@ export class Filter {
     min_rating: number = -1;
     is_in_stock: boolean = true;
     categories: Category[] = [];
+    brands: Brand[] = [];
 }

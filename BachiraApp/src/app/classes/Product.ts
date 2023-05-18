@@ -1,11 +1,19 @@
 export class Product {
     id!: number;
-    name!: string;
     image!: string;
     rating!: number;
     quantity!: number;
     discount!: number;
     categories!: Category[];
+    brand!: Brand;
+    
+    private _name!: string;
+    public get name(): string {
+        return this.brand + " " + this._name;
+    }
+    public set name(value: string) {
+        this._name = value;
+    }
     
     private _price!: number;
     public get price(): number {
@@ -26,6 +34,13 @@ export class Product {
 
         return result;
     }
+}
+
+export enum Brand {
+    Nike = "Nike"
+    , Zara = "Zara"
+    , Rolex = "Rolex"
+    , Clinique = "Clinique"
 }
 
 export enum Category {

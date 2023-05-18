@@ -12,12 +12,12 @@ export class LoginComponent {
   enteredUser: User = new User();
   isValidUser: boolean = true;
 
-  constructor(public appComponent: AppComponent) {}
+  constructor(public appComponent: AppComponent, private userManagement: UserManagement) {}
 
   OnSubmit() {
-    this.isValidUser = UserManagement.IsValidUser(this.enteredUser);
+    this.isValidUser = this.userManagement.IsValidUser(this.enteredUser);
     if (this.isValidUser) {
-      let user: User | undefined = UserManagement.GetFullUser(this.enteredUser.email);
+      let user: User | undefined = this.userManagement.GetFullUser(this.enteredUser.email);
       if (user != undefined) this.appComponent.EnterUser(user);
     }
     this.enteredUser = new User();

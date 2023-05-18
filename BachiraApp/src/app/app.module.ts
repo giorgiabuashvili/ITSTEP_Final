@@ -20,6 +20,7 @@ import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { PasswordPipe } from './pipes/PasswordPipe';
 import { ProductService } from './classes/ProductService';
+import { UserManagement } from './classes/UserManagement';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { ProductService } from './classes/ProductService';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, UserManagement],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

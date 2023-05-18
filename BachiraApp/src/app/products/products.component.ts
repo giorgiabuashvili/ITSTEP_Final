@@ -28,6 +28,10 @@ export class ProductsComponent implements OnInit {
     })
   }
 
+  Reset() {
+    this.enteredFilter = new Filter();
+  }
+
   parse(selected: string) {
     this.enteredFilter.categories[0] = parseInt(selected);
   }
