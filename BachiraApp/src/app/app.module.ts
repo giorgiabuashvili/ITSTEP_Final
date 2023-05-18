@@ -12,7 +12,6 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { BrandsComponent } from './brands/brands.component';
-import { PricingComponent } from './pricing/pricing.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
@@ -33,7 +32,6 @@ import { ProductService } from './classes/ProductService';
     ProductsComponent,
     CategoriesComponent,
     BrandsComponent,
-    PricingComponent,
     ErrorPageComponent,
     AboutPageComponent,
     TermsAndConditionsPageComponent,

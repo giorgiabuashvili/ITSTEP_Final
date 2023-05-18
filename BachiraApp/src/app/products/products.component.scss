@@ -1,0 +1,56 @@
+@use "../styles/variables";
+
+
+#container {
+    display: flex;
+    padding: 4em 2.5em;
+    #products-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9375em;
+        width: 65%;
+    }
+
+    #filter-form {
+        border-left: 0.125em solid variables.$Green;
+        width: 35%;
+        form {
+            margin: 0 auto;
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9375em;
+            
+            div {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                gap: 0.3125em;
+            }
+
+            div:nth-child(2), div:nth-child(3) {
+                width: 45%;
+            }
+
+            label {
+                width: 100%;
+            }
+
+            input, select {
+                border-radius: 0.625em;
+                box-sizing: border-box;
+                padding: 0.5em 1em;
+                outline: none;
+                border: 0.0625em solid variables.$Green;
+            }
+
+            input, button, select {
+                width: 100%;
+            }
+
+            input:nth-child(3) {
+                margin-left: auto;
+            }
+        }
+    }
+}

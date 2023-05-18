@@ -13,7 +13,6 @@ export class HeaderComponent {
     "products",
     "categories",
     "brands",
-    "pricing",
   ];
 
   constructor(public appComponent: AppComponent) {}

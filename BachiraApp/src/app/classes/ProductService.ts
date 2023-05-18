@@ -41,13 +41,13 @@ export class ProductService {
         })
 
         return products.filter(prod => {
-            if (filter.name != "#" && filter.name != prod.name) return false;
+            if (filter.name != "" && filter.name != prod.name) return false;
             if (filter.id != -1 && filter.id != prod.id) return false;
             if (filter.min_price != -1 && filter.min_price > prod.price) return false;
             if (filter.max_price != -1 && filter.max_price < prod.price) return false;
             if (filter.min_rating != -1 && filter.min_rating > prod.rating) return false;
             if (filter.is_in_stock != true && prod.quantity <= 0) return false;
-            if (filter.categories.length > 0 && !filter.categories.includes(prod.category)) return false;
+            if (filter.categories.length > 0 && !filter.categories.every(val=>prod.categories.includes(val))) return false;
 
             return true;
         })
@@ -55,7 +55,7 @@ export class ProductService {
 }
 
 export class Filter {
-    name:string = "#";
+    name:string = "";
     id:number = -1;
     min_price: number = -1;
     max_price: number = -1;

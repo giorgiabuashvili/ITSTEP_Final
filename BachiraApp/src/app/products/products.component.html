@@ -1,1 +1,35 @@
-<p>products works!</p>
+<div id="container">
+    <div id="products-container">
+        <div class="app-product-card" *ngFor="let product of products">
+            <img [src]="product.image" alt="">
+            <h1>{{product.name}}</h1>
+            <p>{{product.price | currency}}</p>
+        </div>
+    </div>
+    <div id="filter-form">
+        <form action="" (submit)="Filter()">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" [(ngModel)]="enteredFilter.name">
+            </div>
+            <div>
+                <label for="min-price">Min. Price</label>
+                <input type="number" name="min-price" id="min-price" [(ngModel)]="enteredFilter.min_price">
+            </div>
+            <div>
+                <label for="max-price">Max. Price</label>
+                <input type="number" name="max-price" id="max-price" [(ngModel)]="enteredFilter.max_price">
+            </div>
+            <div>
+                <label for="categories">Categories</label>
+                <select name="categories" id="categories" [ngModel]="enteredFilter.categories[0]" (ngModelChange)="parse($event)">
+                    <option [value]="0">Fashion</option>
+                    <option [value]="1">Electronics</option>
+                    <option [value]="2">Shoes</option>
+                    <option [value]="3">Skincare</option>
+                </select>
+            </div>
+            <button class="app-button-g">Filter</button>
+        </form>
+    </div>
+</div>

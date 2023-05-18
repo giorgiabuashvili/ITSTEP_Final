@@ -146,7 +146,7 @@
             h1,
             p {
                 filter: brightness(1);
-                text-shadow: 0 0 10px rgb(82, 81, 81);
+                text-shadow: 0 0 0.625em rgb(82, 81, 81);
             }
 
             h1 {
@@ -172,7 +172,7 @@
         }
 
         .browse-categories-button:hover {
-            transform: translateY(-5px);
+            transform: translateY(-0.3125em);
         }
     }
 }
@@ -186,19 +186,22 @@
 
     h1,
     h1 span {
-
         width: 100%;
         font-family: 'Manrope';
         font-style: normal;
         font-weight: 700;
-        font-size: 32px;
-        line-height: 40px;
-        letter-spacing: 0.3px;
+        font-size: 2em;
+        line-height: 2.5em;
+        letter-spacing: 0.01875em;
         color: #101913;
     }
 
     h1 {
         span {
+            display: inline;
+            margin: 0;
+            padding: 0;
+            font-size: inherit;
             color: variables.$Green;
         }
     }

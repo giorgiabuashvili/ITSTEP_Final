@@ -79,7 +79,9 @@ app-root {
 
     .app-product-card {
         img {
-            border-radius: 15px;
+            border-radius: 0.9375em;
+            width: 17.5em;
+            height: 23.75em;
         }
 
         h1 {

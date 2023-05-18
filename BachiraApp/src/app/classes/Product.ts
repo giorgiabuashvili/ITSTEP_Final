@@ -5,7 +5,7 @@ export class Product {
     rating!: number;
     quantity!: number;
     discount!: number;
-    category!: Category;
+    categories!: Category[];
     
     private _price!: number;
     public get price(): number {
