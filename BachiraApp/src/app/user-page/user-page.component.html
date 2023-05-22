@@ -1,7 +1,7 @@
 <div class="container" *ngIf="!updatingUser">
-    <img [src]="user.avatar" alt="">
+    <img src="assets/Images/default_profile_picture.png" alt="">
     <div id="info-container">
-        <h1>{{user.username}}</h1>
+        <h1>{{user.userName}}</h1>
         <h1>{{user.email}}</h1>
         <h1>{{user.password | password}}</h1>
     </div>
@@ -19,12 +19,9 @@
 </div>
 <div class="container" *ngIf="updatingUser">
     <form action="" id="change-form" (submit)="ChangeUser()">
+        <img src="assets/Images/default_profile_picture.png" alt="">
         <div>
-            <input type="text" name="avatar" id="avatar" [(ngModel)]="changedUser.avatar" required #avatar="ngModel">
-            <img [src]="changedUser.avatar" alt="">
-        </div>
-        <div>
-            <input type="text" name="name" id="name" [(ngModel)]="changedUser.username" required #name="ngModel">  
+            <input type="text" name="name" id="name" [(ngModel)]="changedUser.userName" required #name="ngModel">  
         </div>
         <div>
             <input type="email" name="email" id="email" [(ngModel)]="changedUser.email" [email]="true" placeholder="Enter new email" required #email="ngModel">
@@ -32,6 +29,6 @@
         <div>
             <input type="password" name="password" id="password" [(ngModel)]="changedUser.password" placeholder="Enter new email" required #password="ngModel" minlength="8">
         </div>
-        <button class="app-button-g" [disabled]="avatar.invalid || name.invalid || email.invalid || password.invalid">Change</button>
+        <button class="app-button-g" [disabled]="name.invalid || email.invalid || password.invalid">Change</button>
     </form>
 </div>

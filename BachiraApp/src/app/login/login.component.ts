@@ -15,11 +15,13 @@ export class LoginComponent {
   constructor(public appComponent: AppComponent, private userManagement: UserManagement) {}
 
   OnSubmit() {
-    this.isValidUser = this.userManagement.IsValidUser(this.enteredUser);
-    if (this.isValidUser) {
-      let user: User | undefined = this.userManagement.GetFullUser(this.enteredUser.email);
-      if (user != undefined) this.appComponent.EnterUser(user);
-    }
-    this.enteredUser = new User();
+
+    this.userManagement.GetUser(this.enteredUser).then(res=> {
+      if (res == false) this.isValidUser = false;
+      else {
+        this.appComponent.EnterUser(User.parse(res));
+        this.isValidUser = true;
+      }
+    })
   }
 }

@@ -12,6 +12,6 @@
         <button class="app-button-g" (click)="appComponent.OpenRouterLink(['register'])">Register</button>
     </div>
     <div (click)="appComponent.OpenRouterLink(['user'])" *ngIf="appComponent.isLogined" id="profile-corner">
-        <img [src]="appComponent.user.avatar" alt="profile_picture">
+        <img src="assets/Images/default_profile_picture.png" alt="profile_picture">
     </div>
 </header>

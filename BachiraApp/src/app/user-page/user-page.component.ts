@@ -19,11 +19,11 @@ export class UserPageComponent {
     this.appComponent.ExitUser();
     this.appComponent.OpenRouterLink(['']);
   }
-
+  
   public Start() {
     this.updatingUser = true;
   }
-
+  
   public ChangeUser() {
     this.updatingUser = false;
     this.user = this.changedUser;

@@ -14,12 +14,12 @@ export class ProductsComponent implements OnInit {
   enteredFilter: Filter = new Filter();
   filter: Filter = new Filter();
 
-  constructor(private productService: ProductService, private router: Router, private activeRoute: ActivatedRoute) {}
+  constructor(private productService: ProductService, private router: Router, private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.Filter();
   }
-  
+
   Filter() {
     this.filter = this.enteredFilter;
     console.log(this.filter)

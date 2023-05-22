@@ -14,7 +14,8 @@ export class RegisterComponent {
   constructor(private userManagement: UserManagement) {}
 
   OnSubmit() {
-    this.accountAlreadyExists = !this.userManagement.CreateNewUser(this.enteredUser);
-    this.enteredUser = new User();
+    this.userManagement.CreateNewUser(this.enteredUser).then(res=> {
+      console.log(res);
+    });
   }
 }

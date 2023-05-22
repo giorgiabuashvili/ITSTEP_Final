@@ -3,67 +3,74 @@ import { User } from "./User";
 
 @Injectable()
 export class UserManagement {
-    private users_data: any = JSON.parse(localStorage.getItem('user_data') + "");
-    private users: User[] = this.users_data;
 
-    public CreateNewUser(user: User) {
-        if (this.users == null) this.users = [];
-        
-        if (this.Exists(user)) return false;
-
-        let newUser: User = user;
-        let maxId: number = 0;
-        this.users.forEach(user=>{
-            if (maxId < user.id) maxId = user.id;
+    public async CreateNewUser(user: User) {
+        let exists: Boolean = false;
+        await this.GetUser(user).then(res=> {
+            if (res != false) exists = true;
         })
 
-        newUser.id = maxId+1;
+        if (exists) return false;
 
-
-        this.users.push(user);
-        this.users_data = JSON.stringify(this.users);
-        localStorage.setItem('user_data', this.users_data);
-
-        return true;
-    }
-
-    public UpdateUser(updated: User) {
-        for (let i = 0; i < this.users.length; i++) {
-            const user = this.users[i];
-            if (updated.id == user.id) {
-                this.users[i] = updated;
-                this.users_data = JSON.stringify(this.users);
-                localStorage.setItem('user_data', this.users_data);
-                break;
-            }
-        }
-    }
-
-    public IsValidUser(user: User) {
-        if (!this.Exists(user)) return false;
-        let userOfEmail: User | undefined = this.users.find((user_)=> { return user_.email == user.email })
-
-        return userOfEmail?.password == user.password && userOfEmail != undefined;
-    }
-
-    public PrintUsers() {
-        console.log(this.users_data);
-    }
-
-    public GetFullUser(email: string) {
-        return this.users.find(u => u.email == email);
-    }
-
-    private Exists(user: User) {
-        if (this.users == null) return false;
-
-        for (let i = 0; i < this.users.length; i++) {
-            const user_ = this.users[i];
-            if (user.email == user_.email) {
-                return true;
-            }
-        }
-
+        let createdUser: User = new User();
+        await fetch('http://kketelauri-001-site1.gtempurl.com/api/user/adduser', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "userName": user.userName,
+                "firstName": "",
+                "lastName": "",
+                "email": user.email,
+                "privateNumber": "",
+                "password": user.password,
+                "active": true
+            })
+        }).then(response => createdUser = User.parse(response), reject => console.log("account cant be created"));
+        if (createdUser != new User()) return createdUser;
         return false;
+    }
+
+    public async GetUser(user: User) {
+        let failed: boolean = false;
+        let result: User = new User();
+        await fetch('http://kketelauri-001-site1.gtempurl.com/api/user/login', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "email": user.email,
+                "password" : user.password
+            })
+        }).then(response => response.json().then(response=> {
+            result = User.parse(response);
+        }), reject => failed = true)
+
+        if (failed) return false;
+        return result;
+    }
+
+    public async UpdateUser(user: User) {
+        await fetch('http://kketelauri-001-site1.gtempurl.com/api/user/updateuser', {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "id" : user.id.toString(),
+                "userName": user.userName,
+                "firstName": "",
+                "lastName": "",
+                "email": user.email,
+                "privateNumber": "",
+                "password": user.password,
+                "active": true
+            })
+        })
     }
 }
