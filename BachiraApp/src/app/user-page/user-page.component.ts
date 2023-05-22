@@ -10,6 +10,8 @@ import { UserManagement } from '../classes/UserManagement';
 })
 export class UserPageComponent {
   user: User = this.appComponent.user;
+  changedUser: User = this.user;
+  updatingUser: boolean = false;
 
   constructor(public appComponent: AppComponent, private userManagement: UserManagement) {}
 
@@ -18,7 +20,13 @@ export class UserPageComponent {
     this.appComponent.OpenRouterLink(['']);
   }
 
-  public Update() {
-    this.userManagement.UpdateUser(this.user);
+  public Start() {
+    this.updatingUser = true;
   }
+
+  public ChangeUser() {
+    this.updatingUser = false;
+    this.user = this.changedUser;
+    this.userManagement.UpdateUser(this.user);
+  } 
 }
