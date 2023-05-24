@@ -36,6 +36,10 @@ export class AppComponent implements OnInit{
     this.isLogined = false;
     this.user = new User();
   }
+
+  public OpenProduct(id: number) {
+    this.OpenRouterLink(['products/', id]);
+  }
 }
 
 

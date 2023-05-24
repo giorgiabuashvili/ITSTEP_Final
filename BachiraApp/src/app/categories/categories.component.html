@@ -1,1 +1,5 @@
-<p>categories works!</p>
+<div class="container">
+    <div *ngFor="let category of categories;index as i" style="background-image: url({{backgroundImages[i]}});" (click)="OpenProductsPage(i)">
+        <h1>{{category}}</h1>
+    </div>
+</div>

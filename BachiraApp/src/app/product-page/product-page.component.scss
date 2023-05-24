@@ -1,0 +1,41 @@
+@use "../styles/variables";
+
+.container {
+    padding-top: 4em;
+    padding-bottom: 8em;
+    padding-inline: 2.5em;
+    display: flex;
+    gap: 10em;
+    .product-image {
+        width: 20em;
+        border-radius: 0.9375em;
+        padding: 0.1em;
+        border: 0.1875em solid variables.$Green;
+    }
+
+    .info {   
+        width: 31.25em;
+        padding: 3em;
+        border-radius: 0.8375em;
+        border: 0.1875em solid variables.$Green;
+
+        div {
+            position: relative;
+            bottom: 2em;
+
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        p {
+            margin-top: 0;
+            font-size: 1.75em;
+        }
+
+        button {
+            font-size: 1.2em;
+        }
+    }
+}

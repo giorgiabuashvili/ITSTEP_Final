@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Filter, ProductService } from '../classes/ProductService';
-import { Product } from '../classes/Product';
+import { Category, Product } from '../classes/Product';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-products',
@@ -14,15 +15,23 @@ export class ProductsComponent implements OnInit {
   enteredFilter: Filter = new Filter();
   filter: Filter = new Filter();
 
-  constructor(private productService: ProductService, private router: Router, private activeRoute: ActivatedRoute) { }
+  constructor(private productService: ProductService, public appComponent: AppComponent, public activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.Filter();
+
+    if (this.activatedRoute.snapshot.paramMap.has("filter")) {
+      let obj = JSON.parse(this.activatedRoute.snapshot.paramMap.get("filter") + ""); 
+      this.filter = Filter.parse(obj);
+      this.enteredFilter = this.filter;
+      console.log(this.filter);
+      this.Filter();
+    }
+
   }
 
   Filter() {
     this.filter = this.enteredFilter;
-    console.log(this.filter)
     this.productService.GetProductsByFilter(this.filter).then(res => {
       this.products = res;
     })

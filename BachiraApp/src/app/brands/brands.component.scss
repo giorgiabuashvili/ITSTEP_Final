@@ -1,0 +1,29 @@
+.container {
+    padding-top: 4em;
+    padding-bottom: 8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5em;
+
+    div {
+        min-width: 23.75em;
+        height: 31.25em;
+        border-radius: 2.8125em;
+        box-shadow: 0 0 15px lightgray;
+        transition: 0.1s ease;
+        padding: 3.5em;
+        box-sizing: border-box;
+        background-size: contain;
+        background-position: center;
+
+        h1 {
+            font-size: 1.4em;
+            text-shadow: 0 0 10px white;
+        }
+    }
+    
+    div:hover {
+        transform: translateY(-0.9375em);
+    }
+}

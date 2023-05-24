@@ -9,13 +9,6 @@
         <button class="app-button-g" (click)="Start()">Edit Profile</button>
         <button class="app-button-w" (click)="OnExitButtonClick()">Log out</button>
     </div>
-    <div id="cart">
-        <div class="app-product-div" *ngFor="let product of user.cart">
-            <img [src]="product.image" alt="">
-            <h1>{{product.name}}</h1>
-            <p>{{product.price | currency}}</p>
-        </div>
-    </div>
 </div>
 <div class="container" *ngIf="updatingUser">
     <form action="" id="change-form" (submit)="ChangeUser()">
@@ -31,4 +24,15 @@
         </div>
         <button class="app-button-g" [disabled]="name.invalid || email.invalid || password.invalid">Change</button>
     </form>
+</div>
+<div id="cart" style="padding: 2.75em;">
+    <h1>In Cart</h1>
+    <div>
+        <div class="app-product-card" *ngFor="let product of cart; index as i" >
+            <img [src]="product.image" alt="" (click)="appComponent.OpenProduct(product.id)">
+            <h1>{{product.name}}</h1>
+            <p>{{product.price | currency}}</p>
+            <button (click)="RemoveFromCart(i)">X</button>
+        </div>
+    </div>
 </div>

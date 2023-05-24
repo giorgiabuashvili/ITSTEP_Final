@@ -11,14 +11,18 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/terms-and-conditions-page.component';
 import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "home", component: HomeComponent },
   { path: "products", component: ProductsComponent },
+  { path: "products/:id", component: ProductPageComponent },
   { path: "categories", component: CategoriesComponent },
+  { path: "categories/:filter", component: ProductsComponent },
   { path: "brands", component: BrandsComponent },
+  { path: "brands/:filter", component: ProductsComponent },
   { path: "about", component: AboutPageComponent },
   { path: "terms&conditions", component: TermsAndConditionsPageComponent },
   { path: "privacy", component: PrivacyPageComponent },

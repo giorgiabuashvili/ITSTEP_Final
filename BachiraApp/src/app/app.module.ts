@@ -21,6 +21,7 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { PasswordPipe } from './pipes/PasswordPipe';
 import { ProductService } from './classes/ProductService';
 import { UserManagement } from './classes/UserManagement';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { UserManagement } from './classes/UserManagement';
     TermsAndConditionsPageComponent,
     PrivacyPageComponent,
     UserPageComponent,
-    PasswordPipe
+    PasswordPipe,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,

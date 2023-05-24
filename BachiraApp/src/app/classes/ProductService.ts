@@ -64,4 +64,16 @@ export class Filter {
     is_in_stock: boolean = true;
     categories: Category[] = [];
     brands: Brand[] = [];
+
+    public static parse(param: { [key: string]: any }) {
+        const result = new Filter();
+
+        for (const key in param) {
+            if (param.hasOwnProperty(key)) {
+                (result as any)[key] = param[key];
+            }
+        }
+
+        return result;
+    }
 }

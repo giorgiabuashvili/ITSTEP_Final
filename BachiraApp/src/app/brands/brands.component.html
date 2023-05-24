@@ -1,1 +1,5 @@
-<p>brands works!</p>
+<div class="container">
+    <div *ngFor="let brand of brands;index as i" style="background-image: url({{backgroundImages[i]}});" (click)="OpenProductsPage(i)">
+        <h1>{{brand}}</h1>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 <div id="container">
     <div id="products-container">
-        <div class="app-product-card" *ngFor="let product of products">
+        <div class="app-product-card" *ngFor="let product of products" (click)="appComponent.OpenProduct(product.id)">
             <img [src]="product.image" alt="">
             <h1>{{product.name}}</h1>
             <p>{{product.price | currency}}</p>
