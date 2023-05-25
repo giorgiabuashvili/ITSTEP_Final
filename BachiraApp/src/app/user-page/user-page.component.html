@@ -27,6 +27,7 @@
 </div>
 <div id="cart" style="padding: 2.75em;">
     <h1>In Cart</h1>
+    <p>Total cost: {{totalCost | currency}}</p>
     <div>
         <div class="app-product-card" *ngFor="let product of cart; index as i" >
             <img [src]="product.image" alt="" (click)="appComponent.OpenProduct(product.id)">
@@ -35,4 +36,5 @@
             <button (click)="RemoveFromCart(i)">X</button>
         </div>
     </div>
+    <button class="app-button-g" *ngIf="cart.length>0" (click)="OpenPurchasePage()">Purchase</button>
 </div>

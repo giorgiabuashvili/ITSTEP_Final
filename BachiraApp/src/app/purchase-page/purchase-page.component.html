@@ -1,0 +1,26 @@
+<div class="container" (submit)="Submit()">
+    <h1>Total: {{totalCost | currency}}</h1>
+    <form action="" #form="ngForm">
+        <div>
+            <label for="card-number">Card number</label>
+            <input type="number" name="card-number" id="card-number" [(ngModel)]="cardNumber" required>
+        </div>
+        <div>
+            <label for="name-on-card">Name on card</label>
+            <input type="text" name="name-on-card" id="name-on-card" [(ngModel)]="nameOnCard" required>
+        </div>
+        <div>
+            <div>
+                <label for="expiry-month">Expiry Date</label>
+                <input type="number" name="expiry-month" id="expiry-month" [(ngModel)]="expiryDate.month" required>
+                <input type="number" name="expiry-year" id="expiry-year" [(ngModel)]="expiryDate.year" required>
+            </div>
+        </div>
+        <div>
+            <label for="sec-code">Security code</label>
+            <input type="password" name="sec-code" id="sec-code" [(ngModel)]="secCode" #sec_code="ngModel" required>
+        </div>
+        <button class="app-button-g" type="submit">Purchase</button>
+    </form>
+    <p *ngIf="thanksForYourPuchase">Thanks for your puchase</p>
+</div>

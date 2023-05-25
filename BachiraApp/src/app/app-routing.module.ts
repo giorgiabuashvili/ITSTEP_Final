@@ -12,6 +12,7 @@ import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/ter
 import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { PurchasePageComponent } from './purchase-page/purchase-page.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: "terms&conditions", component: TermsAndConditionsPageComponent },
   { path: "privacy", component: PrivacyPageComponent },
   { path: "user", component: UserPageComponent },
+  { path: "purchase", component: PurchasePageComponent },
   { path: "", redirectTo: "/home", pathMatch: 'full' },
   { path: "**", component: ErrorPageComponent }
 ];

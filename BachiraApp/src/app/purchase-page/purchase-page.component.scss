@@ -1,0 +1,59 @@
+@use "../styles/variables";
+
+.container {
+    padding-inline: 2.5em;
+    padding-bottom: 8em;
+    padding-top: 4em;
+
+    h1 {
+        font-size: 2em;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.825em;
+        div {
+            display: flex;
+            flex-wrap: wrap;
+
+            label,
+            input {
+                width: 100%;
+            }
+        }
+
+        input {
+            padding: 0.5em 0.625em;
+            width: 100%;
+            box-shadow: 0 0.125em 0.125em lightgray;
+            outline: none;
+            border: none;
+            color: variables.$Grey;
+            border-radius: 0.5em;
+        }
+
+
+        div:nth-child(3) {
+            div {
+                width: 100%;
+
+                input {
+                    width: 45%;
+                }
+
+                input:last-child {
+                    margin-left: auto;
+                }
+            }
+        }
+
+        input {
+            width: 5.625em;
+        }
+    }
+
+    p {
+        color: variables.$Green;
+    }
+}

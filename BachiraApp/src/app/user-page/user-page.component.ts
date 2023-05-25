@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { User } from '../classes/User';
 import { UserManagement } from '../classes/UserManagement';
@@ -14,11 +14,20 @@ export class UserPageComponent implements OnInit {
   cart: Product[] = [];
   changedUser: User = this.user;
   updatingUser: boolean = false;
+  totalCost: number = 0;
 
   constructor(public appComponent: AppComponent, private userManagement: UserManagement) {}
 
+  UpdateTotalCost(): void {
+    this.totalCost = 0;
+    this.cart.forEach(product=>{
+      this.totalCost += product.price;
+    })
+  }
+
   ngOnInit(): void {
     this.ParseCart();
+    this.UpdateTotalCost();
   }
 
   public OnExitButtonClick() {
@@ -41,11 +50,17 @@ export class UserPageComponent implements OnInit {
     this.cart.splice(i, 1);
     this.user.cart = this.cart;
     this.appComponent.EnterUser(this.user);
+    this.UpdateTotalCost();
   }
 
   public ParseCart() {
     this.user.cart.forEach(prod=>{
       this.cart.push(Product.parse(prod));
     })
+  }
+
+  public OpenPurchasePage() {
+    this.appComponent.purchaseData = this.cart;
+    this.appComponent.OpenRouterLink(['purchase'])
   }
 }

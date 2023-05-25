@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from './classes/User';
+import { Product } from './classes/Product';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,8 @@ export class AppComponent implements OnInit{
   title = 'BachiraApp';
   isLogined: boolean = false;
   user: User = new User();
+
+  purchaseData: Product[] = [];
 
   constructor(private router: Router) { }
 

@@ -22,6 +22,7 @@ import { PasswordPipe } from './pipes/PasswordPipe';
 import { ProductService } from './classes/ProductService';
 import { UserManagement } from './classes/UserManagement';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { PurchasePageComponent } from './purchase-page/purchase-page.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ProductPageComponent } from './product-page/product-page.component';
     PrivacyPageComponent,
     UserPageComponent,
     PasswordPipe,
-    ProductPageComponent
+    ProductPageComponent,
+    PurchasePageComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ProductService, UserManagement],
+  providers: [ProductService, UserManagement, UserPageComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
