@@ -28,19 +28,19 @@ Browse Categories of
 The Store
     </pre>
     <div>    
-        <div class="browse-categories-button" style="background-image: url(assets/Images/fashion_bg.jpg);">
+        <div class="browse-categories-button" style="background-image: url(assets/Images/fashion_bg.jpg);" (click)="categoriesComponent.OpenProductsPage(0)">
             <h1>Fashion</h1>
             <p>{{numberOfFashionProducts}} products</p>
         </div>
-        <div class="browse-categories-button" style="background-image: url(assets/Images/shoes_bg.png);">
+        <div class="browse-categories-button" style="background-image: url(assets/Images/shoes_bg.png);" (click)="categoriesComponent.OpenProductsPage(2)">
             <h1>Shoes</h1>
             <p>{{numberOfShoeProducts}} products</p>
         </div>
-        <div class="browse-categories-button" style="background-image: url(assets/Images/electronic_bg.png);">
+        <div class="browse-categories-button" style="background-image: url(assets/Images/electronic_bg.png);" (click)="categoriesComponent.OpenProductsPage(1)">
             <h1>Electronics</h1>
             <p>{{numberOfElectronicsProducts}} products</p>
         </div>
-        <div class="browse-categories-button" style="background-image: url(assets/Images/skincare_bg.jpg);">
+        <div class="browse-categories-button" style="background-image: url(assets/Images/skincare_bg.jpg);" (click)="categoriesComponent.OpenProductsPage(3)">
             <h1>Skincare</h1>
             <p>{{numberOfSkincareProducts}} products</p>
         </div>

@@ -50,7 +50,7 @@ import { PurchasePageComponent } from './purchase-page/purchase-page.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ProductService, UserManagement, UserPageComponent],
+  providers: [ProductService, UserManagement, UserPageComponent, CategoriesComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

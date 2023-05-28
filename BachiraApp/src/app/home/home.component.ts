@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { Filter, ProductService } from '../classes/ProductService';
 import { Category, Product } from '../classes/Product';
+import { CategoriesComponent } from '../categories/categories.component';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit {
   numberOfShoeProducts: number = 0;
   numberOfSkincareProducts: number = 0;
 
-  constructor(public appComponent: AppComponent, public productService: ProductService) {}
+  constructor(public appComponent: AppComponent, public productService: ProductService, public categoriesComponent: CategoriesComponent) {}
 
   async ngOnInit() {
 
