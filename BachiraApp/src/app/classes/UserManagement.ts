@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { User } from "./User";
-
 @Injectable()
 export class UserManagement {
 
@@ -13,7 +12,7 @@ export class UserManagement {
         if (exists) return false;
 
         let createdUser: User = new User();
-        await fetch('http://kketelauri-001-site1.gtempurl.com/api/user/adduser', {
+        await fetch('https://kketelauri-001-site1.gtempurl.com/api/user/adduser', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -36,7 +35,7 @@ export class UserManagement {
     public async GetUser(user: User) {
         let failed: boolean = false;
         let result: User = new User();
-        await fetch('http://kketelauri-001-site1.gtempurl.com/api/user/login', {
+        await fetch('https://kketelauri-001-site1.gtempurl.com/api/user/login', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -55,7 +54,7 @@ export class UserManagement {
     }
 
     public async UpdateUser(user: User) {
-        await fetch('http://kketelauri-001-site1.gtempurl.com/api/user/updateuser', {
+        await fetch('https://kketelauri-001-site1.gtempurl.com/api/user/updateuser', {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',

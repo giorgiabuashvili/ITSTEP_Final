@@ -16,7 +16,8 @@ export class LoginComponent {
 
   OnSubmit() {
 
-    this.userManagement.GetUser(this.enteredUser).then(res=> {
+    this.userManagement.GetUser(this.enteredUser)
+    .then(res=> {
       if (res == false) this.isValidUser = false;
       else {
         this.appComponent.EnterUser(User.parse(res));

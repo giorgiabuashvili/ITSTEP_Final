@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     let tryToGetUserJSON: string | null = localStorage.getItem("entered_user");
-    if (tryToGetUserJSON != null) {
+    if (tryToGetUserJSON != null && tryToGetUserJSON != "") {
       this.user = User.parse(JSON.parse(tryToGetUserJSON));
       this.isLogined = true;
     }
@@ -38,6 +38,7 @@ export class AppComponent implements OnInit{
   public ExitUser() {
     this.isLogined = false;
     this.user = new User();
+    localStorage.setItem("entered_user", "");
   }
 
   public OpenProduct(id: number) {
