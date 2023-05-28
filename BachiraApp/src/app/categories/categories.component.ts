@@ -10,16 +10,16 @@ import { AppComponent } from '../app.component';
 })
 export class CategoriesComponent {
   categories: string[] = [
-    "Electronics",
     "Fashion",
+    "Electronics",
     "Shoe",
     "Skincare"
   ]
 
   backgroundImages: string[] = [
     "assets/Images/fashion_bg.jpg",
-    "assets/Images/shoes_bg.png",
     "assets/Images/electronic_bg.png",
+    "assets/Images/shoes_bg.png",
     "assets/Images/skincare_bg.jpg"
   ]
 
